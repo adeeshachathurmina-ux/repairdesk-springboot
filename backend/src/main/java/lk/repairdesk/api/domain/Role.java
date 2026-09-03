@@ -1,0 +1,1 @@
+package lk.repairdesk.api.domain; public enum Role { CUSTOMER, TECHNICIAN, MANAGER, ADMIN }

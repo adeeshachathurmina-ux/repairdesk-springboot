@@ -1,0 +1,1 @@
+package lk.repairdesk.api.domain; public enum Priority { LOW, MEDIUM, HIGH, URGENT }

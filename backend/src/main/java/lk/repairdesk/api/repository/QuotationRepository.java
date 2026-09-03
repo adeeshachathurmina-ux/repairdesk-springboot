@@ -1,0 +1,1 @@
+package lk.repairdesk.api.repository; import java.util.*; import org.springframework.data.domain.*; import lk.repairdesk.api.domain.Quotation; import org.springframework.data.jpa.repository.JpaRepository; public interface QuotationRepository extends JpaRepository<Quotation,Long> { List<Quotation> findByRepairRequestIdOrderByCreatedAtDesc(Long requestId);}

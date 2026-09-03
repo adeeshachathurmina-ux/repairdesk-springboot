@@ -1,0 +1,1 @@
+package lk.repairdesk.api.domain; public enum DeviceCategory { PHONE, LAPTOP, TABLET, DESKTOP, OTHER }

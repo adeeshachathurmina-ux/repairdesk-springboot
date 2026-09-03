@@ -1,0 +1,1 @@
+package lk.repairdesk.api.repository; import java.util.*; import org.springframework.data.domain.*; import lk.repairdesk.api.domain.Diagnosis; import org.springframework.data.jpa.repository.JpaRepository; public interface DiagnosisRepository extends JpaRepository<Diagnosis,Long> { Optional<Diagnosis> findByRepairRequestId(Long requestId);}

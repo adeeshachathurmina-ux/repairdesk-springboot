@@ -1,0 +1,1 @@
+package lk.repairdesk.api.domain; public enum QuotationStatus { PENDING, ACCEPTED, REJECTED, EXPIRED }

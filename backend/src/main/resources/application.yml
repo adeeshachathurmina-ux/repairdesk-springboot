@@ -1,0 +1,19 @@
+spring:
+  application.name: repairdesk-api
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/repairdesk}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate.ddl-auto: validate
+  flyway.enabled: true
+server:
+  error.include-message: never
+management.endpoints.web.exposure.include: health,info
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET:local_development_secret_must_be_32_chars_long}
+    expiration-ms: 86400000
+  decision-service-url: ${APP_DECISION_SERVICE_URL:http://localhost:8000}
+  seed-demo: ${APP_SEED_DEMO:false}

@@ -1,0 +1,4 @@
+package lk.repairdesk.api.domain;
+import jakarta.persistence.*; import lombok.*; import java.math.BigDecimal; import java.time.*;
+@Entity @Table(name="devices") @Getter @Setter @NoArgsConstructor
+public class Device { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="owner_id") private User owner; @Enumerated(EnumType.STRING) @Column(nullable=false) private DeviceCategory category; @Column(nullable=false,length=80) private String brand; @Column(nullable=false,length=100) private String model; @Column(length=120) private String serialNumber; @Column(precision=12,scale=2) private BigDecimal purchasePrice; private LocalDate purchaseDate; @Column(length=1000) private String notes; @Column(nullable=false,updatable=false) private Instant createdAt=Instant.now(); }

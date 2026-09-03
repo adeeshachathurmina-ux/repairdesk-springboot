@@ -1,0 +1,1 @@
+package lk.repairdesk.api.domain; public enum RepairStatus { SUBMITTED, ASSIGNED, DIAGNOSING, QUOTED, APPROVED, IN_REPAIR, READY_FOR_COLLECTION, COMPLETED, CANCELLED }
